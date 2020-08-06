@@ -1,7 +1,7 @@
 from dateutil.relativedelta import relativedelta
 from odoo import models, fields, api
 from odoo.exceptions import ValidationError
-from datetime import datetime, date
+from datetime import datetime
 
 
 class ProductTemplateInherit(models.Model):
@@ -19,7 +19,6 @@ class ProductTemplateInherit(models.Model):
         for rec in self:
             date_to = rec.date_to
             date_from = rec.date_from
-            print("check warrranty from product")
             if date_from and date_to :
                 if date_to < date_from:
                     raise ValidationError(('Ngày bắt đầu phải trước ngày kết thúc.'))

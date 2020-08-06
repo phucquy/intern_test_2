@@ -29,6 +29,7 @@
         'wizard/mass_update_warranty.xml',
         'views/product_inherit.xml',
         'views/template_product_inherit.xml',
+        'views/sale_order_line_inherit.xml',
 
     ],
     # only loaded in demonstration mode

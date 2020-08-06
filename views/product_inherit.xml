@@ -10,10 +10,10 @@
                 <xpath expr="//field[@name='taxes_id']" position="before">
                     <!-- Add your fields or attributes here -->
 
-                    <field name="date_from" groups="product_task.group_advanced_sale_2"/>
-                    <field name="date_to" groups="product_task.group_advanced_sale_2"/>
-                    <field name="product_warranty" groups="product_task.group_advanced_sale_2"/>
-                    <field name="warranty_time" groups="product_task.group_advanced_sale_2"/>
+                    <field name="date_from"         groups="product_task.group_advanced_sale_2"/>
+                    <field name="date_to"           groups="product_task.group_advanced_sale_2"/>
+                    <field name="product_warranty"  groups="product_task.group_advanced_sale_2"/>
+                    <field name="warranty_time"     groups="product_task.group_advanced_sale_2"/>
                 </xpath>
 
             </field>
