@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <!--   Product Price List -->
+        <record id="mass_update_warranty_view_form" model="ir.ui.view">
+            <field name="name">Mass update Warranty</field>
+            <field name="model">mass.update.warranty</field>
+            <field name="arch" type="xml">
+                <form string="update">
+                    <group>
+                        <field name="date_from"/>
+                        <field name="date_to"/>
+                        <field name="product_warranty"/>
+                    </group>
+                    <footer>
+                        <button name="update_mass_warranty" string="Update" type="object" class="btn-primary"/>
+                        <button string="Cancel" class="btn-secondary" special="cancel"/>
+                    </footer>
+                </form>
+            </field>
+        </record>
+
+        <act_window id="action_mass_update_warranty"
+                    name="Update Warranty"
+                    res_model="mass.update.warranty"
+                    binding_model="product.template"
+                    binding_views="list"
+                    view_mode="form" target="new"/>
+
+    </data>
+</odoo>

@@ -20,13 +20,16 @@
     'version': '0.1',
 
     # any module necessary for this one to work correctly
-    'depends': ['base','sale'],
+    'depends': ['base', 'sale'],
 
     # always loaded
     'data': [
         # 'security/ir.model.access.csv',
+        'security/groups.xml',
+        'wizard/mass_update_warranty.xml',
         'views/product_inherit.xml',
-        'views/templates.xml',
+        'views/template_product_inherit.xml',
+
     ],
     # only loaded in demonstration mode
     'demo': [

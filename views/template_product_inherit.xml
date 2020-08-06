@@ -1,0 +1,20 @@
+<odoo>
+    <template id="special_discount_code" inherit_id="website_sale.total">
+        <xpath expr="//div[@id='cart_total']//table/tr[last()]" position="before">
+            <t t-foreach="website_sale_order.website_order_line" t-as="line">
+                <t t-if="line.product_id.status == 'valid'">
+                    <tr>
+                        <td t-esc="line.product_id.name"/>&#x20;
+                        <td t-esc="line.product_id.product_warranty"/>
+                    </tr>
+                </t>
+                <p t-else="">
+                    <tr>
+                        <td t-esc="line.product_id.name"/>&#x20;
+                          <td>No Warranty</td>
+                    </tr>
+                </p>
+            </t>
+        </xpath>
+    </template>
+</odoo>
